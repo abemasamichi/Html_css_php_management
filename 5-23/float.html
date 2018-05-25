@@ -1,0 +1,141 @@
+<!-- HTML5のタグを使用していますので、xhtmlの場合はheaderなどのタグをdivに変更してください。 -->
+<header id="Header">
+    <div class="inner">
+        ヘッダー
+    </div>
+</header>
+<nav>
+    <ul id="Navi" class="clearfix">
+        <!-- ここにclearfix ※floatさせる要素の直の親要素に付ける -->
+        <li>01</li>
+        <!-- liを全部 float leftで横並びに -->
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+    </ul>
+</nav>
+<div id="Contents" class="clearfix">
+    <!-- ここにclearfix ※floatさせる要素の直の親要素に付ける -->
+    <div id="Main">メイン</div>
+    <!-- float leftさせる -->
+    <div id="Side">サイド</div>
+    <!-- float leftさせる rightでもよい -->
+</div>
+<footer id="Footer">
+    <div class="inner">フッター</div>
+</footer>
+
+<style>
+    /* =========================================================
+    Header
+    ========================================================= */
+
+    #Header {
+        width: 100%;
+        /* 横幅を100%に */
+        background: #FFE5E5;
+    }
+
+    #Header .inner {
+        width: 700px;
+        min-height: 30px;
+        margin: 0 auto;
+        padding-top: 30px;
+        background: #FFC9CA;
+        text-align: center;
+    }
+
+    #Header .inner p {
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        /* 横幅を100%に */
+    }
+
+    /* =========================================================
+    nav
+    ========================================================= */
+
+    nav #Navi {
+        width: 700px;
+        margin: 0 auto;
+        background: #C4C9FF;
+    }
+
+    nav #Navi li {
+        float: left;
+        width: 20%;
+        /* ナビは5つなので100÷5=20で計算 */
+        min-height: 40px;
+        margin: 0;
+        background: none;
+        box-sizing: border-box;
+        /* border分足されるので、box-sizingでborderを含むwidthに変更 */
+        border: #E1EAFF solid;
+        border-width: 0 1px 0 1px;
+        list-style: none;
+    }
+
+    /* =========================================================
+    Contents
+    ========================================================= */
+
+    #Contents {
+        width: 700px;
+        margin: 0 auto;
+        padding: 10px;
+        background: #D4D4D4;
+        box-sizing: border-box;
+        /* 同じくpaddingを含むwidthへ変更 */
+    }
+
+    /* =========================================================
+    Main
+    ========================================================= */
+
+    #Contents #Main {
+        float: left;
+        /* 左に寄せるよ */
+        width: 480px;
+        min-height: 400px;
+        background: #D5A4FF;
+        text-align: center;
+    }
+
+    /* =========================================================
+    Side
+    ========================================================= */
+
+    #Contents #Side {
+        float: left;
+        /* 左に寄せて#Mainの横に並べるよ */
+        width: 190px;
+        min-height: 400px;
+        margin-left: 10px;
+        background: #FDFFBF;
+        text-align: center;
+    }
+
+    /*==========================================================
+    Footer
+    ========================================================= */
+
+    #Footer {
+        width: 100%;
+        /* 横幅を100%に */
+        background: #DAFFDA;
+    }
+
+    #Footer .inner {
+        width: 700px;
+        min-height: 80px;
+        margin: 0 auto;
+        background: #7BF469;
+        text-align: center;
+    }
+
+</style>
